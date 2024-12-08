@@ -30,7 +30,7 @@
   'dydxprotocol/stats': ["query.pb.h", "genesis.pb.h", "tx.pb.h", "stats.pb.h", "params.pb.h"],
   'dydxprotocol/bridge': ["query.pb.h", "genesis.pb.h", "tx.pb.h", "bridge_event.pb.h", "params.pb.h",
                           "bridge_event_info.pb.h"],
-  'dydxprotocol/vest': ["query.pb.h", "genesis.pb.h", "tx.pb.h", "vest_entry.pb.h"]
+  'dydxprotocol/vest': ["query.pb.h", "genesis.pb.h", "tx.pb.h", "vest_entry.pb.h"],
 }) %}
 
 {% set dydx_v4_proto_header_dir_paths = ['amino', 'cosmos', 'cosmos_proto', 'gogoproto', 'google', 'tendermint'] %}
