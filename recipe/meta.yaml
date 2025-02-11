@@ -1,5 +1,5 @@
 {% set name = "dydx-v4-proto-cpp" %}
-{% set version = "1.16.3" %}
+{% set version = "1.17.0" %}
 
 {% set dydx_v4_proto_header_paths = ({
   'dydxprotocol/clob': ["order.pb.h", "query.pb.h", "operation.pb.h", "order_removals.pb.h", "genesis.pb.h", "tx.pb.h",
@@ -43,7 +43,7 @@ package:
 source:
   folder: all-sources
   url: https://github.com/dydxprotocol/v4-clients/archive/refs/tags/v4-client-js@{{ version }}.tar.gz
-  sha256: a0808669e109e1cccb78c4a84ca7852ce848ede883839c81bda8ef15422973e2
+  sha256: 97eccf0670730d118d91351bfbb24c7620f4d4752a54712439f19629666f3d21
   patches:
     - patches/0001-build-proto-only.patch
     - patches/0002-remove-unused-packages.patch
