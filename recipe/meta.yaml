@@ -92,11 +92,11 @@ outputs:
         - {{ compiler('cxx') }}
         - {{ stdlib("c") }}
       host:
-        - {{ pin_subpackage('libdydx_v4_proto-headers') }}
+        - {{ pin_subpackage('libdydx_v4_proto-headers', exact=true) }}
         - libabseil
         - libprotobuf
       run:
-        - {{ pin_subpackage('libdydx_v4_proto-headers') }}
+        - {{ pin_subpackage('libdydx_v4_proto-headers', exact=true) }}
         # - libprotobuf >=4.22  # [win]
     test:
       files:
@@ -158,9 +158,9 @@ outputs:
         - libzlib
     requirements:
       host:
-        - {{ pin_subpackage('libdydx_v4_proto') }}
+        - {{ pin_subpackage('libdydx_v4_proto', exact=true) }}
       run:
-        - {{ pin_subpackage('libdydx_v4_proto') }}
+        - {{ pin_subpackage('libdydx_v4_proto', exact=true) }}
     test:
       commands:
         - echo "libdydx_v4_proto is a meta-package and has no tests."
