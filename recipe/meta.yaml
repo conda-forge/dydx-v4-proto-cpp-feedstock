@@ -151,7 +151,7 @@ outputs:
   - name: libdydx_v4_proto
     build:
       run_exports:
-        - {{ pin_subpackage('libdydx_v4_proto') }}
+        - {{ pin_subpackage('libdydx_v4_proto', exact=true) }}
       ignore_run_exports:
         - ucrt  # [win]
         - vc14_runtime  # [win
