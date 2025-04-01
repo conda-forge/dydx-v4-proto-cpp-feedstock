@@ -59,7 +59,6 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
     - cmake
-    # - libprotobuf >=4.22  # [build_platform == target_platform]
     - m2w64-binutils  # [win]
     - ninja
     - pkg-config
@@ -92,12 +91,11 @@ outputs:
         - {{ compiler('cxx') }}
         - {{ stdlib("c") }}
       host:
-        - {{ pin_subpackage('libdydx_v4_proto-headers', exact=true) }}
+        - libdydx_v4_proto-headers {{ version }}
         - libabseil
         - libprotobuf
       run:
-        - {{ pin_subpackage('libdydx_v4_proto-headers', exact=true) }}
-        # - libprotobuf >=4.22  # [win]
+        - libdydx_v4_proto-headers {{ version }}
     test:
       files:
         - helpers/verify_installed_lib.ps1  # [win]
