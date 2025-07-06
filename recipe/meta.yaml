@@ -51,7 +51,7 @@ source:
     - patches/0004-remove-FetchContent.patch
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
